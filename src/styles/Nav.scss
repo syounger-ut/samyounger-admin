@@ -1,0 +1,26 @@
+@import "./variables/colors";
+
+nav {
+  text-align: right;
+  ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      display: inline-block;
+      background: rgba($primary-color, 0.8);
+      &:hover {
+        background: rgba($primary-color, 1);
+      }
+      a {
+        display: block;
+        color: $text-color;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        height: 2rem;
+        line-height: 2rem;
+      }
+    }
+  }
+}
