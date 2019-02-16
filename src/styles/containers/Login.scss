@@ -1,0 +1,42 @@
+@import "../base";
+
+form {
+  display: grid;
+  margin: 0 auto;
+  width: 20rem;
+  max-height: 25rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  input {
+    font-family: $primary-font-stack;
+    font-size: 1rem;
+  }
+  > div {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    margin: 0.5rem 0;
+    border: 1px solid rgba($filler-color, 0.25);
+    div {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      align-items: center;
+      border-right: 1px solid rgba($filler-color, 0.25);
+      i {
+        font-size: 1.5rem;
+      }
+    }
+    input {
+      max-width: 100%;
+      padding: 0.5rem;
+      border: none;
+    }
+  }
+  input[type="submit"] {
+    background: $secondary-color;
+    height: 2rem;
+    margin: 1rem 0;
+  }
+}

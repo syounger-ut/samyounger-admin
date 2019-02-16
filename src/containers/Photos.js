@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-class Bar extends Component {
+class Photos extends Component {
   render() {
     return (
-      <div>Bar</div>
+      <div>Photos</div>
     )
   }
 }
 
-export default Bar;
+export default Photos;

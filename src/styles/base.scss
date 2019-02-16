@@ -1,0 +1,13 @@
+@import "./variables/fonts";
+@import "./variables/colors";
+
+body {
+  font-family: $primary-font-stack;
+}
+
+.error {
+  background: $warning-color;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+}
