@@ -16,6 +16,7 @@ export function loginUser(user) {
       password: user.password
     }
   }).then(function(response) {
+    TOKEN = response.data.token;
     localStorage.setItem("auth_token", response.data.token)
     return response.data;
   }).catch(function(error) {
@@ -27,18 +28,14 @@ export function loginUser(user) {
   });
 }
 
-export function authenticateToken(token) {
-  var requestUrl = `${SAM_YOUNGER_API_URL}/authenticate`;
-
+export function getUser() {
+  var requestUrl = `${SAM_YOUNGER_API_URL}/users/me`;
+  console.log(TOKEN)
   return axios({
-    method: 'post',
+    method: 'get',
     url: requestUrl,
-    headers: { 'Authorization': token }
+    headers: { 'Authorization': TOKEN }
   }).then(function(response) {
-    localStorage.setItem("auth_token", response.data.token)
     return response.data;
-  }).catch(function(error) {
-    localStorage.removeItem("auth_token");
-    throw new Error("Your login session expired. Please login");
-  });
+  })
 }

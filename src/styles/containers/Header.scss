@@ -1,0 +1,36 @@
+@import "../base";
+
+header {
+  p {
+    text-align: right;
+    margin: 0;
+    font-weight: lighter;
+    font-size: small;
+    padding-right: 1rem;
+  }
+  nav {
+    text-align: center;
+    ul {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      border-bottom: 1px solid rgba(black, 0.25);
+      li {
+        display: inline-block;
+        &:hover {
+          font-weight: bold;
+        }
+        a {
+          display: block;
+          color: $text-color;
+          font-weight: lighter;
+          text-decoration: none;
+          padding: 0.5rem 1rem;
+          height: 2rem;
+          line-height: 2rem;
+        }
+      }
+    }
+  }
+}

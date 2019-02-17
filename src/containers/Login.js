@@ -19,7 +19,6 @@ class Login extends Component {
   submitForm(user) {
     loginUser(user).then(
       (result) => {
-        this.props.setLoggedIn(result.user.email);
         this.props.history.push("/");
       },
       (error) => {
